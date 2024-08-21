@@ -4,7 +4,6 @@ import 'package:covid_19/pages/countryPage.dart';
 import 'package:covid_19/panels/infoPanel.dart';
 import 'package:covid_19/panels/mostaffectedcountries.dart';
 import 'package:covid_19/panels/worldwidePanels.dart';
-import 'package:easy_dynamic_theme/easy_dynamic_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
@@ -16,7 +15,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  late Map worldData;
+   late Map worldData;
   fetchWorldWideData() async {
     var uri = Uri.parse('https://disease.sh/v3/covid-19/all');
     http.Response response = await http.get(uri);
